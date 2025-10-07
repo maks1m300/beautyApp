@@ -1,5 +1,8 @@
-import React, { type FC } from "react";
+import { type FC } from "react";
+import { Typography } from "antd";
+import { useUser } from "../../redux";
 
 export const Header: FC = () => {
-  return <div>ЖужаКюр</div>;
+  const { userName } = useUser();
+  return <Typography.Title level={2}>Запись на маникюр</Typography.Title>;
 };

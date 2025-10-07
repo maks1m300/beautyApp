@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { DatePicker, Flex } from "antd";
+import { DatePicker, Flex, Typography } from "antd";
 import { DropdownList } from "react-widgets/cjs";
 import dayjs from "dayjs";
 
@@ -25,7 +25,7 @@ export const Main: FC = () => {
 
   return (
     <Flex vertical>
-      <div>Выберите дату для записи</div>
+      <Typography.Text>Выберите дату для записи</Typography.Text>
       <Flex>
         <DatePicker disabledDate={disabledDate} />
         <DropdownList data={[12, 15, 17]} />
