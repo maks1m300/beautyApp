@@ -1,0 +1,15 @@
+.picker {
+  .ant-picker-ranges {
+    display: none !important;
+  }
+
+  @media (max-width: 768px) {
+    .ant-picker-panel-container {
+      width: 370px !important;
+    }
+
+    .ant-picker-date-panel {
+      width: 100% !important;
+    }
+  }
+}

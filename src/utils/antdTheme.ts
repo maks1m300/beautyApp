@@ -1,10 +1,10 @@
 // config/antdTheme.ts
-import { type ThemeConfig, theme } from 'antd';
-import type { TelegramTheme } from '../redux/hooks/themeHook';
+import { type ThemeConfig, theme } from "antd";
+import type { TelegramTheme } from "../redux/hooks/themeHook";
 
 export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
   const isDark = tgTheme.isDark;
-  
+
   return {
     algorithm: isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
     token: {
@@ -16,50 +16,50 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
       colorTextTertiary: tgTheme.hint_color,
       colorLink: tgTheme.link_color,
       colorError: tgTheme.destructive_text_color,
-      colorWarning: '#faad14',
-      colorSuccess: '#52c41a',
+      colorWarning: "#faad14",
+      colorSuccess: "#52c41a",
       colorInfo: tgTheme.accent_text_color,
-      
+
       // Фоновые цвета
       colorBgContainer: tgTheme.section_bg_color,
       colorBgElevated: tgTheme.secondary_bg_color,
       colorBgLayout: tgTheme.bg_color,
-      
+
       // Цвета границ
-      colorBorder: tgTheme.hint_color + '40',
-      colorBorderSecondary: tgTheme.hint_color + '20',
-      
+      colorBorder: tgTheme.hint_color + "40",
+      colorBorderSecondary: tgTheme.hint_color + "20",
+
       // Радиусы скругления (Telegram-like)
       borderRadius: 12,
       borderRadiusLG: 16,
       borderRadiusSM: 8,
       borderRadiusXS: 4,
-      
+
       // Размеры шрифтов
       fontSize: 16,
       fontSizeLG: 18,
       fontSizeSM: 14,
       fontSizeXL: 20,
-      
+
       // Высоты компонентов
       controlHeight: 44,
       controlHeightLG: 52,
       controlHeightSM: 36,
-      
+
       // Отступы
       padding: 16,
       paddingLG: 20,
       paddingSM: 12,
       paddingXS: 8,
       paddingXXS: 4,
-      
+
       // Маржины
       margin: 16,
       marginLG: 20,
       marginSM: 12,
       marginXS: 8,
       marginXXS: 4,
-      
+
       // Размеры иконок
       sizeXXL: 48,
       sizeXL: 40,
@@ -68,42 +68,41 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
       size: 20,
       sizeSM: 16,
       sizeXS: 12,
-      
+
       // Line height
       lineHeight: 1.5,
       lineHeightLG: 1.6,
       lineHeightSM: 1.4,
-      
+
       // Font weight
       fontWeightStrong: 600,
-      
+
       // Тени
-      boxShadow: 'none',
-      boxShadowSecondary: 'none',
-      boxShadowTertiary: 'none',
+      boxShadow: "none",
+      boxShadowSecondary: "none",
+      boxShadowTertiary: "none",
     },
     components: {
       // Кастомизация Typography
-       Typography: {
+      Typography: {
         // Базовые цвета
         colorText: tgTheme.text_color,
         colorTextHeading: tgTheme.text_color,
         colorTextSecondary: tgTheme.subtitle_text_color,
         colorTextDescription: tgTheme.hint_color,
-        colorTextDisabled: tgTheme.hint_color + '80',
+        colorTextDisabled: tgTheme.hint_color + "80",
         colorTextLabel: tgTheme.subtitle_text_color,
-        
-        
+
         // Цвета ссылок
         colorLink: tgTheme.link_color,
-        colorLinkHover: tgTheme.link_color + 'E6',
-        colorLinkActive: tgTheme.link_color + 'CC',
-        
+        colorLinkHover: tgTheme.link_color + "E6",
+        colorLinkActive: tgTheme.link_color + "CC",
+
         // Цвета состояний
         colorError: tgTheme.destructive_text_color,
         colorWarning: tgTheme.accent_text_color, // или свой цвет для warning
-        colorSuccess: '#52c41a',
-        
+        colorSuccess: "#52c41a",
+
         // Размеры шрифтов для разных уровней
         fontSize: 16, // базовый размер
         fontSizeSM: 14,
@@ -114,7 +113,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         fontSizeHeading3: 24,
         fontSizeHeading4: 20,
         fontSizeHeading5: 18,
-        
+
         // Line heights
         lineHeight: 1.5,
         lineHeightSM: 1.4,
@@ -124,27 +123,23 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         lineHeightHeading3: 1.3,
         lineHeightHeading4: 1.35,
         lineHeightHeading5: 1.4,
-        
+
         // Font weights
         fontWeightStrong: 600,
-        
-        
+
         // Стили для Title (заголовков)
-        titleMarginTop: '0.5em',
-        titleMarginBottom: '0.5em',
-        
-       
-        
+        titleMarginTop: "0.5em",
+        titleMarginBottom: "0.5em",
       },
 
       // Кастомизация Button
       Button: {
         colorPrimary: tgTheme.button_color,
-        colorPrimaryHover: tgTheme.button_color + 'E6',
-        colorPrimaryActive: tgTheme.button_color + 'CC',
+        colorPrimaryHover: tgTheme.button_color + "E6",
+        colorPrimaryActive: tgTheme.button_color + "CC",
         defaultColor: tgTheme.text_color,
         defaultBg: tgTheme.secondary_bg_color,
-        defaultBorderColor: 'transparent',
+        defaultBorderColor: "transparent",
         borderRadius: 12,
         borderRadiusLG: 16,
         borderRadiusSM: 8,
@@ -160,13 +155,13 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         paddingInlineLG: 24,
         paddingInlineSM: 16,
       },
-      
+
       // Кастомизация Input
       Input: {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextPlaceholder: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
         controlHeight: 44,
@@ -178,7 +173,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         paddingInlineSM: 12,
         addonBg: tgTheme.section_bg_color,
       },
-      
+
       // Кастомизация Card
       Card: {
         colorBgContainer: tgTheme.section_bg_color,
@@ -192,13 +187,13 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         padding: 16,
         paddingLG: 20,
         paddingSM: 12,
-        boxShadow: 'none',
-        boxShadowTertiary: 'none',
+        boxShadow: "none",
+        boxShadowTertiary: "none",
       },
-      
+
       // Кастомизация Modal
       Modal: {
-        colorBgMask: 'rgba(0, 0, 0, 0.6)',
+        colorBgMask: "rgba(0, 0, 0, 0.6)",
         colorBgElevated: tgTheme.bg_color,
         colorText: tgTheme.text_color,
         colorTextHeading: tgTheme.text_color,
@@ -208,15 +203,15 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         paddingMD: 24,
         paddingContentHorizontal: 20,
         paddingContentHorizontalLG: 24,
-        boxShadow: '0 24px 48px rgba(0, 0, 0, 0.4)',
+        boxShadow: "0 24px 48px rgba(0, 0, 0, 0.4)",
       },
-      
+
       // Кастомизация Select
       Select: {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextPlaceholder: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
         controlHeight: 44,
@@ -224,24 +219,24 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         controlHeightSM: 36,
         fontSize: 16,
       },
-      
+
       // Кастомизация Menu
       Menu: {
         colorBgContainer: tgTheme.bg_color,
-        colorItemBg: 'transparent',
+        colorItemBg: "transparent",
         colorItemBgSelected: tgTheme.secondary_bg_color,
-        colorItemBgHover: tgTheme.secondary_bg_color + '80',
+        colorItemBgHover: tgTheme.secondary_bg_color + "80",
         colorItemText: tgTheme.text_color,
         colorItemTextSelected: tgTheme.button_color,
         colorItemTextHover: tgTheme.text_color,
-        colorSubItemBg: 'transparent',
+        colorSubItemBg: "transparent",
         colorActiveBarWidth: 0,
         borderRadius: 12,
         itemBorderRadius: 12,
         subMenuItemBorderRadius: 12,
         horizontalItemBorderRadius: 12,
       },
-      
+
       // Кастомизация Table
       Table: {
         colorBgContainer: tgTheme.section_bg_color,
@@ -251,11 +246,11 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         borderRadius: 12,
         headerBg: tgTheme.secondary_bg_color,
         headerColor: tgTheme.section_header_text_color,
-        rowHoverBg: tgTheme.secondary_bg_color + '80',
+        rowHoverBg: tgTheme.secondary_bg_color + "80",
         cellPaddingInline: 16,
         cellPaddingBlock: 12,
       },
-      
+
       // Кастомизация Tabs
       Tabs: {
         colorBgContainer: tgTheme.bg_color,
@@ -270,7 +265,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         itemActiveColor: tgTheme.button_color,
         inkBarColor: tgTheme.button_color,
       },
-      
+
       // Кастомизация Divider
       Divider: {
         colorSplit: tgTheme.secondary_bg_color,
@@ -278,11 +273,11 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         marginLG: 20,
         marginSM: 12,
       },
-      
+
       // Кастомизация Switch
       Switch: {
         colorPrimary: tgTheme.button_color,
-        colorPrimaryHover: tgTheme.button_color + 'E6',
+        colorPrimaryHover: tgTheme.button_color + "E6",
         trackHeight: 24,
         trackMinWidth: 44,
         trackPadding: 2,
@@ -291,17 +286,17 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
 
       // Кастомизация Alert
       Alert: {
-        colorInfoBg: tgTheme.accent_text_color + '20',
-        colorInfoBorder: tgTheme.accent_text_color + '40',
+        colorInfoBg: tgTheme.accent_text_color + "20",
+        colorInfoBorder: tgTheme.accent_text_color + "40",
         colorInfo: tgTheme.accent_text_color,
-        colorSuccessBg: '#52c41a20',
-        colorSuccessBorder: '#52c41a40',
-        colorSuccess: '#52c41a',
-        colorWarningBg: '#faad1420',
-        colorWarningBorder: '#faad1440',
-        colorWarning: '#faad14',
-        colorErrorBg: tgTheme.destructive_text_color + '20',
-        colorErrorBorder: tgTheme.destructive_text_color + '40',
+        colorSuccessBg: "#52c41a20",
+        colorSuccessBorder: "#52c41a40",
+        colorSuccess: "#52c41a",
+        colorWarningBg: "#faad1420",
+        colorWarningBorder: "#faad1440",
+        colorWarning: "#faad14",
+        colorErrorBg: tgTheme.destructive_text_color + "20",
+        colorErrorBorder: tgTheme.destructive_text_color + "40",
         colorError: tgTheme.destructive_text_color,
         borderRadius: 12,
         padding: 16,
@@ -312,8 +307,8 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
       Message: {
         contentBg: tgTheme.section_bg_color,
         colorInfo: tgTheme.accent_text_color,
-        colorSuccess: '#52c41a',
-        colorWarning: '#faad14',
+        colorSuccess: "#52c41a",
+        colorWarning: "#faad14",
         colorError: tgTheme.destructive_text_color,
         borderRadius: 12,
         padding: 16,
@@ -325,12 +320,12 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorText: tgTheme.text_color,
         colorTextHeading: tgTheme.text_color,
         colorInfo: tgTheme.accent_text_color,
-        colorSuccess: '#52c41a',
-        colorWarning: '#faad14',
+        colorSuccess: "#52c41a",
+        colorWarning: "#faad14",
         colorError: tgTheme.destructive_text_color,
         borderRadius: 12,
         padding: 16,
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
       },
 
       // Кастомизация Tooltip
@@ -339,7 +334,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorText: tgTheme.text_color,
         borderRadius: 8,
         padding: 12,
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
       },
 
       // Кастомизация Popover
@@ -348,7 +343,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorText: tgTheme.text_color,
         borderRadius: 12,
         padding: 0,
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
       },
 
       // Кастомизация Dropdown
@@ -357,7 +352,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorText: tgTheme.text_color,
         borderRadius: 12,
         padding: 8,
-        boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.3)",
       },
 
       // Кастомизация Drawer
@@ -375,8 +370,8 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorText: tgTheme.text_color,
         colorTextDescription: tgTheme.hint_color,
         colorInfo: tgTheme.button_color,
-        colorSuccess: '#52c41a',
-        colorWarning: '#faad14',
+        colorSuccess: "#52c41a",
+        colorWarning: "#faad14",
         colorError: tgTheme.destructive_text_color,
         borderRadius: 100,
         lineBorderRadius: 100,
@@ -386,7 +381,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
       Tag: {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         borderRadius: 6,
         fontSize: 14,
         lineHeight: 1.4,
@@ -436,7 +431,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
       // Кастомизация Skeleton
       Skeleton: {
         color: tgTheme.secondary_bg_color,
-        colorGradientEnd: tgTheme.secondary_bg_color + '80',
+        colorGradientEnd: tgTheme.secondary_bg_color + "80",
       },
 
       // Кастомизация Segmented
@@ -503,7 +498,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextPlaceholder: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
       },
@@ -513,7 +508,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextPlaceholder: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
       },
@@ -523,7 +518,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextPlaceholder: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
       },
@@ -533,7 +528,7 @@ export const getAntdTheme = (tgTheme: TelegramTheme): ThemeConfig => {
         colorBgContainer: tgTheme.secondary_bg_color,
         colorText: tgTheme.text_color,
         colorTextDescription: tgTheme.hint_color,
-        colorBorder: 'transparent',
+        colorBorder: "transparent",
         colorPrimaryHover: tgTheme.button_color,
         borderRadius: 12,
       },

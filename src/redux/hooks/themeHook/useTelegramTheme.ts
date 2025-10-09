@@ -1,6 +1,6 @@
 // hooks/useTelegramTheme.ts
-import { useEffect, useState } from 'react';
-import WebApp from '@twa-dev/sdk';
+import { useEffect, useState } from "react";
+import WebApp from "@twa-dev/sdk";
 
 export interface TelegramTheme {
   accent_text_color: string;
@@ -20,24 +20,24 @@ export interface TelegramTheme {
 }
 
 export const useTelegramTheme = (): TelegramTheme => {
-  const [theme, setTheme] = useState<TelegramTheme>(WebApp.themeParams as TelegramTheme);
+  const [theme, setTheme] = useState<TelegramTheme>(
+    WebApp.themeParams as TelegramTheme,
+  );
 
   useEffect(() => {
     const handleThemeChange = () => {
       setTheme(WebApp.themeParams as TelegramTheme);
     };
 
-    WebApp.onEvent('themeChanged', handleThemeChange);
-    
+    WebApp.onEvent("themeChanged", handleThemeChange);
+
     return () => {
-      WebApp.offEvent('themeChanged', handleThemeChange);
+      WebApp.offEvent("themeChanged", handleThemeChange);
     };
   }, [WebApp.themeParams]);
 
-  console.log(theme.text_color,'123123123123123')
-
   return {
     ...theme,
-    isDark: theme.bg_color === '#212121', 
+    isDark: theme.bg_color === "#212121",
   };
 };

@@ -1,1 +1,1 @@
-export * from './useTelegramTheme'
+export * from "./useTelegramTheme";
